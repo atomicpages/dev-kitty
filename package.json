@@ -2,10 +2,16 @@
   "name": "dev-kitty",
   "version": "1.0.0",
   "description": "Practice dev interview questions",
-  "main": "server.js",
+  "main": "server.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "nodemon --exec tsx server.ts",
+    "dev:client": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,13 +25,28 @@
   "homepage": "https://github.com/JesacaLin/dev-kitty#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.0.2",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "mongodb": "^4.10.0",
-    "mongoose": "^6.6.1"
+    "dotenv": "^17.2.3",
+    "envalid": "^8.1.1",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^7.9.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/express": "^5.0.5",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^5.1.1",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.7.3",
+    "tailwindcss": "^4.1.17",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4"
   }
 }

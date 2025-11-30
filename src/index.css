@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0.05em;
+}
+
+body {
+  color: black;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 169%;
+  letter-spacing: 0.02em;
+  font-family: "Akshar", sans-serif;
+}
+
+a {
+  font-size: 1.2rem;
+  line-height: 0.6rem;
+  text-decoration: none;
+  color: #000000;
+}
